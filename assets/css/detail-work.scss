@@ -1,0 +1,96 @@
+@import "./variable";
+@import "./mixin";
+* {
+  color: #000;
+}
+img {
+  max-width: 100%;
+}
+html {
+  font-size: 16px;
+  font-family: "Heebo", sans-serif;
+}
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  @include breakpoint(sm) {
+    padding: 0 18px;
+  }
+}
+/* =============== Header ==========*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .header-menu__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 25px 0;
+    li {
+      padding: 0 15px;
+      a {
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+  }
+}
+/* =============== Detail work ==========*/
+.detail-title {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 50px;
+  @include breakpoint(sm) {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+.detail-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  &__meta {
+    padding: 4px 12px;
+    background-color: $primaryColor;
+    border-radius: 16px;
+    color: #fff;
+    font-weight: 900;
+    font-size: 18px;
+  }
+  &__tag {
+    a {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 29px;
+      text-decoration: none;
+      @include breakpoint(sm) {
+        font-size: 18px;
+      }
+    }
+  }
+}
+.detail-content {
+  p {
+    margin: 20px 0;
+  }
+  img {
+    margin: 20px 0;
+  }
+}
+.footer {
+  padding: 50px 0;
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+  }
+  .footer-copyright {
+    text-align: center;
+    margin-top: 26px;
+  }
+}

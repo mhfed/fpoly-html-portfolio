@@ -36,131 +36,6 @@ html {
     }
   }
 }
-/* =============== Banner ==========*/
-.banner {
-  margin-top: 50px;
-  margin-bottom: 70px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 115px;
-  @include breakpoint(sm) {
-    margin-top: 30px;
-    flex-direction: column-reverse;
-    gap: 10px;
-    text-align: center;
-  }
-  .banner-heading {
-    font-weight: 700;
-    font-size: 44px;
-    line-height: 60px;
-    @include breakpoint(sm) {
-      flex-direction: column-reverse;
-      gap: 10px;
-      text-align: center;
-      font-size: 32px;
-      line-height: 40px;
-    }
-    span {
-      display: block;
-      color: $primaryColor;
-    }
-  }
-  .banner-desc {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-  }
-  .button-download {
-    padding: 12px 24px;
-    background-color: $primaryColor;
-    cursor: pointer;
-    border: none;
-    margin-top: 40px;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 500;
-    transition: all 0.2s;
-    &:hover {
-      background-color: #460f74;
-    }
-  }
-  .banner-img {
-    img {
-      width: 243px;
-      height: 243px;
-      border-radius: 50%;
-      border: 2px solid #460f74;
-      @include breakpoint(sm) {
-        width: 180px;
-        height: 180px;
-      }
-    }
-  }
-}
-/* =============== Recent Posts ==========*/
-.recent-posts__wrapper {
-  background-color: #edf7fa;
-  padding: 30px 0;
-  .recent-posts__head {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 20px;
-    @include breakpoint(sm) {
-      justify-content: center;
-    }
-    span {
-      font-size: 22px;
-      font-weight: 400;
-    }
-    a {
-      text-decoration: none;
-      color: #00a8cc;
-      transition: all 0.2s;
-      font-size: 16px;
-      @include breakpoint(sm) {
-        display: none;
-      }
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-  .posts__list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
-    @include breakpoint(sm) {
-      flex-direction: column;
-      gap: 15px;
-    }
-    .posts__item {
-      padding: 24px;
-      background-color: #fff;
-      h3 {
-        font-size: 26px;
-        font-weight: 700;
-        @include breakpoint(sm) {
-          font-size: 22px;
-        }
-      }
-      .posts__item--body {
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        gap: 40px;
-        font-weight: 400;
-        span {
-          display: block;
-          border-right: 1px solid #000;
-          padding-right: 40px;
-        }
-      }
-    }
-  }
-}
 /* =============== Feature work ==========*/
 .feature-works {
   padding: 20px 0 40px;
@@ -168,11 +43,11 @@ html {
     padding: 0 10px;
   }
   .feature-title {
-    font-weight: 400;
-    font-size: 22px;
+    font-weight: 800;
+    font-size: 44px;
     @include breakpoint(sm) {
       text-align: center;
-      font-size: 18px;
+      font-size: 30px;
     }
   }
   .feature-list {

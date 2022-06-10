@@ -1,0 +1,111 @@
+@import "./variable";
+@import "./mixin";
+* {
+  color: #000;
+}
+html {
+  font-size: 16px;
+  font-family: "Heebo", sans-serif;
+}
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  @include breakpoint(sm) {
+    padding: 0 10px;
+  }
+}
+/* =============== Header ==========*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .header-menu__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 25px 0;
+    li {
+      padding: 0 15px;
+      a {
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+  }
+}
+/* =============== Recent Posts ==========*/
+.recent-posts__wrapper {
+  padding: 30px 0;
+  .recent-posts__head {
+    h1 {
+      font-size: 44px;
+      font-weight: 700;
+    }
+    span {
+      font-size: 22px;
+      font-weight: 400;
+    }
+    a {
+      text-decoration: none;
+      color: #00a8cc;
+      transition: all 0.2s;
+      font-size: 16px;
+      @include breakpoint(sm) {
+        display: none;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .posts__list {
+    .posts__item {
+      padding: 15px 0;
+      background-color: #fff;
+      border-bottom: 1px solid #E0E0E0;
+      h3 {
+        font-size: 26px;
+        font-weight: 700;
+        @include breakpoint(sm) {
+          font-size: 22px;
+        }
+      }
+      .posts__item--body {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 40px;
+        font-weight: 400;
+        span {
+          display: block;
+          border-right: 1px solid #000;
+          padding-right: 40px;
+          font-size: 20px;
+        }
+        a {
+          color: #8695a4;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+.footer {
+  padding: 50px 0;
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+  }
+  .footer-copyright {
+    text-align: center;
+    margin-top: 26px;
+  }
+}
